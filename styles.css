@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 90px 20px 20px;
+  padding: 38px 90px 20px 40px;
   background-color: #E6E2D1;
   position: relative;
   z-index: 100;
@@ -141,27 +141,27 @@ h1, h2, h3, h4 {
    HERO SECTION
 ========================= */
 .hero-section {
-  width: 100%;
-  padding: 10px;
-  overflow-x: hidden;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: flex-start; /* alinha pelo topo, igual outras seções */
+  padding: 60px 20px;      /* mesmo padding das outras seções */
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .hero-left-right-container {
   display: flex;
-  align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
-  justify-content: center;
 }
-
 .hero-left {
   max-width: 600px;
 }
 
 .hero-left h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'JuanaExtraLight', serif;
   font-size: 50px;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
 }
 
 .hero-left .hero-image {
@@ -232,12 +232,20 @@ h1, h2, h3, h4 {
   padding: 60px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
+}
+
+.lovelock-title {
+    font-family: 'JuanaExtraLight', serif;
+    text-align: left;
 }
 
 .lovelock-text {
+  font-family: 'JuanaExtraLight', serif;
   flex: 1;
-  margin-right: 40px;
+  margin-right: 80px;
+  margin-left: 60px;
+  text-align: left;
+  max-width: 400px;
 }
 
 .lovelock-text h3 {
@@ -357,7 +365,6 @@ h1, h2, h3, h4 {
   padding: 0px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
 }
 
 .types-grid {
@@ -431,7 +438,7 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: space-between; /* distribui horizontalmente */
   gap: 30px; /* espaço entre os cards */
-  padding: 0px 20px;
+  padding: 20px 20px;
   max-width: 1400px;
   margin: 0 auto;
   flex-wrap: wrap; /* permite quebra em telas pequenas */
@@ -510,7 +517,7 @@ h1, h2, h3, h4 {
   width: 300px;
   margin: 40px auto;
   padding: 15px;
-  background-color: #555;
+  background-color: #4B4845;
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -518,6 +525,8 @@ h1, h2, h3, h4 {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: none;        /* remove qualquer borda */
+  outline: none;   
 }
 
 .back-to-top:hover {
