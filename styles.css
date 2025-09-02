@@ -321,31 +321,27 @@ h1, h2, h3, h4 {
 
 .square-L-vertical {
   display: grid;
-  grid-template-columns: repeat(1, 40px); /* coluna vertical */
-  grid-template-rows: repeat(5, 40px);    /* altura do L */
+  grid-template-columns: 50px; /* largura da coluna vertical */
+  grid-template-rows: repeat(5, 50px); /* altura da coluna vertical */
   position: relative;
-  margin-left: 20px;  /* espaço do texto */
-  margin-top: 190px;  /* desce o L inteiro */
-  gap: 0;             /* remove espaço entre quadrados */
+  margin-left: 20px;  /* espaço entre texto e L */
+  margin-top: 150px;  /* desce o L inteiro */
+  gap: 0;
 }
-
 
 .square-L-vertical .square {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: 1px solid #333;
   background-color: transparent;
-  margin: 0; /* garante que não haja margem extra */
+  margin: 0;
 }
 
-
-/* último quadrado horizontal do “pé” do L */
 .square-L-vertical .square-bottom-left {
   position: absolute;
-  top: calc(4 * 40px);   /* move para baixo, 4 quadrados abaixo */
-  left: 0;               /* colado na base da coluna */
+  top: calc(4 * 50px); /* mesma altura da coluna vertical */
+  left: -10px;          /* desloca mais para a esquerda */
 }
-
 
 
 
@@ -358,7 +354,7 @@ h1, h2, h3, h4 {
    BLOCOS TEMÁTICOS
 ========================= */
 .section-types {
-  padding: 60px 20px;
+  padding: 0px 20px;
   max-width: 1400px;
   margin: 0 auto;
   border-bottom: 1px solid #333;
