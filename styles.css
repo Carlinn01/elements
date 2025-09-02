@@ -264,7 +264,7 @@ h1, h2, h3, h4 {
 }
 
 /* =========================
-   SEÇÃO EXPLAINER (corrigida)
+   SEÇÃO EXPLAINER
 ========================= */
 .section-explainer {
   padding: 60px 20px;
@@ -275,8 +275,8 @@ h1, h2, h3, h4 {
 .explainer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;  /* centraliza na vertical */
-  gap: 60px; /* espaço entre imagem e texto */
+  align-items: flex-start; /* alinhamento superior da imagem com texto */
+  gap: 60px;
 }
 
 .explainer-left {
@@ -286,6 +286,7 @@ h1, h2, h3, h4 {
 .space-image {
   width: 100%;
   max-width: 600px;
+  max-height: 500px; /* garante alinhamento vertical com o L */
   height: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -294,8 +295,16 @@ h1, h2, h3, h4 {
 .explainer-right {
   flex: 1;
   display: flex;
+  justify-content: space-between; /* separa texto do L */
+  gap: 20px;
+}
+
+/* Container do texto */
+.text-content {
+  flex: 1;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 15px;
 }
 
 .explainer-title {
@@ -310,42 +319,77 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
-/* Blocos temáticos */
-.blocos-tematicos {
+.square-L-vertical {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 30px;
+  grid-template-columns: repeat(1, 40px); /* coluna vertical */
+  grid-template-rows: repeat(5, 40px);    /* altura do L */
+  position: relative;
+  margin-left: 20px;  /* espaço do texto */
+  margin-top: 190px;  /* desce o L inteiro */
+  gap: 0;             /* remove espaço entre quadrados */
 }
 
-.blocos-tematicos .bloco h3 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  color: #333;
-}
 
-.blocos-tematicos .bloco p {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 34px;
-  color: #333;
-}
-
-/* Coluna direita: quadrados verticais */
-.explainer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: flex-start;
-}
-
-.square-vertical {
-  width: 60px;
-  height: 60px;
+.square-L-vertical .square {
+  width: 40px;
+  height: 40px;
   border: 1px solid #333;
   background-color: transparent;
+  margin: 0; /* garante que não haja margem extra */
+}
+
+
+/* último quadrado horizontal do “pé” do L */
+.square-L-vertical .square-bottom-left {
+  position: absolute;
+  top: calc(4 * 40px);   /* move para baixo, 4 quadrados abaixo */
+  left: 0;               /* colado na base da coluna */
+}
+
+
+
+
+/* último quadrado “pé” do L, deslocado para esquerda e uma linha pra cima */
+.square-L-vertical .square-bottom-left {
+  margin-left: -40px; /* desloca para esquerda */
+}
+
+/* =========================
+   BLOCOS TEMÁTICOS
+========================= */
+.section-types {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.type-box {
+  border-right: 1px solid #333;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.type-box:last-child {
+  border-right: none;
+}
+
+.type-box h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.type-box p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* =========================
@@ -384,44 +428,6 @@ h1, h2, h3, h4 {
 .environment-text p {
   font-size: 1.1rem;
   line-height: 1.8;
-}
-
-/* =========================
-   TIPOS DE REAÇÕES
-========================= */
-.section-types {
-  padding: 60px 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-  border-bottom: 1px solid #333;
-}
-
-.types-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.type-box {
-  border-right: 1px solid #333;
-  padding-right: 20px;
-  margin-bottom: 20px;
-}
-
-.type-box:last-child {
-  border-right: none;
-}
-
-.type-box h4 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.type-box p {
-  font-size: 1rem;
-  line-height: 1.6;
 }
 
 /* =========================
