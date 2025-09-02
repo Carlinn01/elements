@@ -388,6 +388,82 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
+
+.section-astrochemistry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* alinha topo do texto e da imagem */
+  padding: 40px 20px;      /* ajusta espaçamento */
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;               /* espaço entre texto e imagem */
+}
+
+.astrochem-text {
+  flex: 1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.astrochem-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.astrochem-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.astrochem-image {
+  flex: 1;
+}
+
+.astrochem-image .nebula-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+.section-reactions-images {
+  display: flex;
+  justify-content: space-between; /* distribui horizontalmente */
+  gap: 30px; /* espaço entre os cards */
+  padding: 0px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* permite quebra em telas pequenas */
+}
+
+.reaction-item {
+  flex: 1; /* cada item ocupa o mesmo espaço */
+  min-width: 250px; /* garante que não fique muito estreito em telas pequenas */
+  text-align: center;
+}
+
+.reaction-image {
+  width: 100%;
+  max-width: 3000px;
+  height: auto;
+
+}
+
+.reaction-item h4 {
+  font-family: 'Playfair Display', serif;
+    text-align: left;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.reaction-item p {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 /* =========================
    AMBIENTES DE REAÇÕES
 ========================= */
