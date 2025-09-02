@@ -219,7 +219,7 @@ h1, h2, h3, h4 {
   max-width: calc(100% - 122px);
   height: 0;
   border-top: 1px solid #000;
-  margin: 0 auto; /* remove espaço superior */
+  margin: 0 auto;
   opacity: 1;
 }
 
@@ -229,267 +229,88 @@ h1, h2, h3, h4 {
 .section-lovelock {
   display: flex;
   justify-content: space-between;
-  padding: 10px 60px 0 60px; /* padding-bottom zerado */
+  padding: 60px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: #e6e2d0;
-  gap: 60px;
-  align-items: flex-end; /* imagem encosta na linha */
+  border-bottom: 1px solid #333;
 }
 
 .lovelock-text {
   flex: 1;
-  max-width: 650px;
+  margin-right: 40px;
 }
 
-.lovelock-title {
-  font-family: 'JuanaExtraLight', serif;
+.lovelock-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
   font-style: italic;
-  font-weight: 280;
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: 0%;
-  margin: 0; /* remove espaço inferior */
-  color: #333;
 }
 
-.lovelock-paragraph {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 36px;
-  color: #333;
-  margin: 0; /* remove qualquer espaçamento extra */
+.lovelock-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .lovelock-image {
-  flex: 1.5;
-  display: flex;
-  justify-content: flex-end;
-  height: auto; /* altura natural */
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .profile-image {
-  width: auto;
-  max-height: 100%; /* ocupa altura da seção */
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* =========================
-   SEÇÃO EXPLAINER
+   SEÇÃO EXPLAINER (corrigida)
 ========================= */
 .section-explainer {
-  display: flex;
-  flex-direction: column;
   padding: 60px 20px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  gap: 40px;
-  position: relative;
-}
-
-.explainer-center {
-  position: relative;
-}
-
-.explainer-title {
-  font-family: 'JuanaExtraLight', serif;
-  font-weight: 280;
-  font-size: 40px;
-  line-height: 48px;
-  color: #333;
-}
-
-.explainer-paragraph {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 34px;
-  color: #333;
-  margin-bottom: 50px; /* espaço para quadrados */
-}
-
-/* Quadrados L invertido */
-.square-l-container {
-  position: absolute;
-  left: -70px; /* colados na esquerda */
-  bottom: 0;   /* base do texto */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.square-vertical {
-  width: 60px;
-  height: 60px;
-  border: 1px solid #333;
-  background-color: transparent;
-}
-
-/* Blocos temáticos abaixo de tudo */
-.blocos-tematicos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 80px;
-}
-
-.blocos-tematicos .bloco h3 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  color: #333;
-}
-
-.blocos-tematicos .bloco p {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 34px;
-  color: #333;
-}
-
-.section-explainer {
-  display: flex;
-  flex-direction: column;
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 40px;
-  position: relative;
 }
 
 .explainer-container {
   display: flex;
-  gap: 40px;
-  position: relative;
+  justify-content: space-between;
+  align-items: center;  /* centraliza na vertical */
+  gap: 60px; /* espaço entre imagem e texto */
 }
 
-/* Coluna esquerda: imagem */
 .explainer-left {
   flex: 1;
 }
 
 .space-image {
   width: 100%;
-  max-width: 835px;
-  height: 557px;
+  max-width: 600px;
+  height: auto;
   border-radius: 10px;
   object-fit: cover;
 }
 
-/* Coluna central: texto */
-.explainer-center {
-  flex: 1;
-  position: relative;
-}
-
-.explainer-title {
-  font-family: 'JuanaExtraLight', serif;
-  font-weight: 280;
-  font-size: 40px;
-  line-height: 48px;
-  color: #333;
-}
-
-.explainer-paragraph {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 34px;
-  color: #333;
-  margin-bottom: 50px; /* espaço para quadrados */
-}
-
-/* Quadrados L invertido */
-.square-l-container {
-  position: absolute;
-  left: -70px; /* colados à esquerda do texto */
-  bottom: 0;   /* base do parágrafo */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.square-vertical {
-  width: 60px;
-  height: 60px;
-  border: 1px solid #333;
-  background-color: transparent;
-}
-
-/* Blocos temáticos abaixo de tudo */
-.blocos-tematicos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.blocos-tematicos .bloco h3 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
-  font-size: 32px;
-  color: #333;
-}
-
-.blocos-tematicos .bloco p {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 34px;
-  color: #333;
-}
-
-/* =========================
-   SEÇÃO EXPLAINER
-========================= */
-.section-explainer {
-  display: flex;
-  justify-content: space-between;
-  padding: 60px 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 40px;
-  align-items: flex-start;
-  background-color: #e6e2d0;
-}
-
-.explainer-left {
-  flex: 1;
-}
-
-.space-image {
-  width: 835px;
-  max-width: 100%;
-  height: 557px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.explainer-center {
+.explainer-right {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
 }
 
 .explainer-title {
-  font-family: 'JuanaExtraLight', serif;
-  font-weight: 280;
-  font-size: 40px;
-  line-height: 48px;
-  color: #333;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .explainer-paragraph {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 34px;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
-/* Blocos temáticos abaixo da coluna central */
+/* Blocos temáticos */
 .blocos-tematicos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -528,80 +349,8 @@ h1, h2, h3, h4 {
 }
 
 /* =========================
-   RESPONSIVIDADE
+   AMBIENTES DE REAÇÕES
 ========================= */
-@media (max-width: 1024px) {
-  .section-explainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .explainer-left,
-  .explainer-center,
-  .explainer-right {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .blocos-tematicos {
-    grid-template-columns: 1fr;
-  }
-
-  .space-image {
-    height: auto;
-  }
-}
-
-
-/* RESPONSIVIDADE */
-@media (max-width: 1024px) {
-  .explainer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .square-l-container {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .blocos-tematicos {
-    grid-template-columns: 1fr;
-    margin-top: 40px;
-  }
-}
-
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-@media (max-width: 1024px) {
-  .section-explainer {
-    padding: 40px 10px;
-  }
-
-  .square-l-container {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .blocos-tematicos {
-    grid-template-columns: 1fr;
-    margin-top: 40px;
-  }
-}
-
-
-/* =========================
-   SEÇÕES INTERNAS
-========================= */
-.section-lovelock,
-.section-explainer,
-.section-astrochemistry,
 .section-environments {
   display: flex;
   justify-content: space-between;
@@ -610,22 +359,69 @@ h1, h2, h3, h4 {
   margin: 0 auto;
 }
 
-.lovelock-text, .explainer-text, .astrochem-text, .environment-text {
+.environment-image {
   flex: 1;
   margin-right: 40px;
 }
 
-.lovelock-image, .explainer-image, .astrochem-image, .environment-image {
-  flex: 1;
+.galaxy-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
   border-radius: 10px;
-  overflow: hidden;
 }
 
-.profile-image, .space-image, .nebula-image, .galaxy-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.environment-text {
+  flex: 1;
+}
+
+.environment-text h2 {
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.environment-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   TIPOS DE REAÇÕES
+========================= */
+.section-types {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid #333;
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.type-box {
+  border-right: 1px solid #333;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.type-box:last-child {
+  border-right: none;
+}
+
+.type-box h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.type-box p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* =========================
@@ -648,74 +444,4 @@ h1, h2, h3, h4 {
 
 .back-to-top:hover {
   background-color: #444;
-}
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-@media (max-width: 1024px) {
-  .nav-links {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .navbar {
-    padding: 78px 20px 20px 20px;
-  }
-
-  .hamburger-menu {
-    right: 20px;
-  }
-
-  .hero-left-right-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-left .hero-image {
-    width: 100%;
-  }
-
-  .hero-right {
-    margin-top: 20px;
-  }
-
-  .squares-grid {
-    justify-content: center;
-  }
-
-  .section-lovelock,
-  .section-explainer,
-  .section-astrochemistry,
-  .section-environments {
-    flex-direction: column;
-  }
-
-  .lovelock-text,
-  .explainer-text,
-  .astrochem-text,
-  .environment-text {
-    margin-right: 0;
-    margin-bottom: 40px;
-  }
-
-  .lovelock-image {
-    max-width: 100%;
-    justify-content: center;
-  }
-
-  .lovelock-title {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .lovelock-paragraph {
-    font-size: 22px;
-    line-height: 30px;
-  }
 }
