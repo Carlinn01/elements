@@ -12,7 +12,7 @@ html, body {
   color: #333;
   background-color: #e6e2d0;
   line-height: 1.7;
-  overflow-x: hidden; /* remove scroll horizontal */
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -151,11 +151,10 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  flex-wrap: wrap; /* permite quebrar no mobile */
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-/* Lado esquerdo */
 .hero-left {
   max-width: 600px;
 }
@@ -172,7 +171,6 @@ h1, h2, h3, h4 {
   border-radius: 10px;
 }
 
-/* Lado direito */
 .hero-right {
   flex: 1;
   display: flex;
@@ -192,11 +190,10 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-/* Grid L deitado */
 .squares-grid {
   display: grid;
   grid-template-columns: repeat(6, 60px);
-  gap: 0; /* quadrados grudados */
+  gap: 0;
   position: relative;
   margin-top: 10px;
 }
@@ -212,20 +209,71 @@ h1, h2, h3, h4 {
   position: absolute;
   width: 60px;
   height: 60px;
-  top: -60px; /* sobe exatamente a altura do quadrado */
-  left: calc(5 * 60px); /* alinhado com o último quadrado da linha */
+  top: -60px;
+  left: calc(5 * 60px);
   background-color: transparent;
   border: 1px solid #333;
 }
 
-/* Linha horizontal */
 .horizontal-line {
-  width: 1522px; /* largura do Figma */
-  max-width: calc(100% - 122px); /* deixa espaço nas bordas */
+  width: 1522px;
+  max-width: calc(100% - 122px);
   height: 0;
   border-top: 1px solid #000;
-  margin: 50px auto 0 auto;
+  margin: 0 auto; /* remove espaço superior */
   opacity: 1;
+}
+
+/* =========================
+   SEÇÃO LOVELOCK
+========================= */
+.section-lovelock {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px 0 60px; /* padding-bottom zerado */
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #e6e2d0;
+  gap: 60px;
+  align-items: flex-end; /* imagem encosta na linha */
+}
+
+.lovelock-text {
+  flex: 1;
+  max-width: 650px;
+}
+
+.lovelock-title {
+  font-family: 'JuanaExtraLight', serif;
+  font-style: italic;
+  font-weight: 280;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0%;
+  margin: 0; /* remove espaço inferior */
+  color: #333;
+}
+
+.lovelock-paragraph {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #333;
+  margin: 0; /* remove qualquer espaçamento extra */
+}
+
+.lovelock-image {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-end;
+  height: auto; /* altura natural */
+}
+
+.profile-image {
+  width: auto;
+  max-height: 100%; /* ocupa altura da seção */
+  object-fit: cover;
 }
 
 /* =========================
@@ -334,5 +382,20 @@ h1, h2, h3, h4 {
   .environment-text {
     margin-right: 0;
     margin-bottom: 40px;
+  }
+
+  .lovelock-image {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .lovelock-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .lovelock-paragraph {
+    font-size: 22px;
+    line-height: 30px;
   }
 }
